@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #167a4a;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #167a4a;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dashboard .card {
+    text-align: center;
+}
+
+.dashboard h3 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.dashboard p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #167a4a;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #167a4a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0f5c37;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+#budgetMessage {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#expenseList {
+    list-style: none;
+}
+
+#expenseList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f7f6;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.expense-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.expense-name {
+    font-weight: bold;
+}
+
+.expense-category {
+    color: #777;
+    font-size: 14px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.delete-button {
+    background-color: #d9534f;
+    padding: 7px 12px;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.delete-button:hover {
+    background-color: #b52b27;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    #expenseList li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
